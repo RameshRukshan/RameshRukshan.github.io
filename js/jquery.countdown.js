@@ -31,10 +31,10 @@
         }
         dateData = {
           years: 0,
-          days: 20,
-          hours: 5,
-          min: 11,
-          sec: 11,
+          days: 0,
+          hours: 0,
+          min: 0,
+          sec: 0,
           millisec: 0
         };
         if (diff >= (365.25 * 86400)) {
@@ -98,7 +98,7 @@
       return this.init();
     };
     $.countdown.defaultOptions = {
-      date: "June 7, 2087 15:03:25",
+      date: "June 7, 2024 15:03:25",
       refresh: 1000,
       onEnd: $.noop,
       render: function(date) {
