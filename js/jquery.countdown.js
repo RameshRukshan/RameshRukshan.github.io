@@ -1,4 +1,3 @@
-
 (function() {
 
   (function($) {
@@ -98,7 +97,7 @@
       return this.init();
     };
     $.countdown.defaultOptions = {
-      date: "Apr 7, 2025 15:03:25",
+      date: "April 7, 2025 15:03:25",
       refresh: 1000,
       onEnd: $.noop,
       render: function(date) {
