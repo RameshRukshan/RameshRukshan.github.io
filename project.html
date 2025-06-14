@@ -30,6 +30,38 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <!DOCTYPE html>
+<html lang="en">
+    
+    <style>
+        .project-filter {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .project-filter .btn {
+            margin: 5px;
+            border-radius: 20px;
+        }
+        .project-filter .btn.active {
+            background-color: #0d6efd;
+            color: white;
+        }
+        .project-item {
+            display: block;
+        }
+        .project-item.hide {
+            display: none;
+        }
+        .project-item.show {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
 </head>
 
 <body>
@@ -124,235 +156,242 @@
     </div>
     <!-- Full Screen Search End -->
 
-
     <!-- Case Start -->
     <div class="container-fluid bg-light py-5">
         <div class="container py-5">
             <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px;">
-                <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Projects Comppleted</div>
+                <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Projects Completed</div>
                 <h1 class="mb-4">Explore My Recent Projects</h1>
             </div>
+            
+            <!-- Project Filter Buttons -->
+            <div class="project-filter wow fadeIn" data-wow-delay="0.2s">
+                <button class="btn btn-outline-primary filter-btn active" data-filter="all">All</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="pm">Project Management</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="web">Web Development</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="graphics">Graphic Design</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="uiux">UI/UX</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="mobile">Mobile App Development</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="system">System Development</button>
+            </div>
+            
             <div class="row g-4">
-                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.3s">
-                    <div class="case-item position-relative overflow-hidden rounded mb-2">
+                <!-- Original projects in their exact order, now with data-category attributes -->
+                <div class="col-lg-4 project-item" data-category="pm">
+                    <div class="case-item position-relative overflow-hidden rounded mb-2 wow fadeIn" data-wow-delay="">
                         <img class="img-fluid" src="img/project-arimac25.png" alt="">
                         <a class="case-overlay text-decoration-none" href="https://arimac.digital/" target="_blank">
                             <small>Project Management</small>
-                            <h5 class="lh-base text-white mb-3">Arimac Digital Cooperate Web
-                            </h5>
-                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.3s">
-                    <div class="case-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="img/project-dilruart.png" alt="">
-                        <a class="case-overlay text-decoration-none" href="https://dilruarthub.com/" target="_blank">
-                            <small>Web Development</small>
-                            <h5 class="lh-base text-white mb-3">Dilru Art Hub Website
-                            </h5>
-                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.3s">
-                    <div class="case-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="img/project-uxg.png" alt="">
-                        <a class="case-overlay text-decoration-none" href="https://www.uxgarage.lk/" target="_blank">
-                            <small>Web Development</small>
-                            <h5 class="lh-base text-white mb-3">UX Garage Website
-                            </h5>
-                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="case-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="img/project-2.jpg" alt="">
-                        <a class="case-overlay text-decoration-none" href="">
-                            <small>UI UX</small>
-                            <h5 class="lh-base text-white mb-3">Vishwa Graphics
-                            </h5>
-                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="case-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="img/project-stgbs.png" alt="">
-                        <a class="case-overlay text-decoration-none" href="">
-                            <small>Web Development</small>
-                            <h5 class="lh-base text-white mb-3">StageBs Website
-                            </h5>
-                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.7s">
-                    <div class="case-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="img/project-3.jpg" alt="">
-                        <a class="case-overlay text-decoration-none" href="">
-                            <small>Graphic Design</small>
-                            <h5 class="lh-base text-white mb-3">RK TechZoon Social Media
-                            </h5>
-                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.3s">
-                    <div class="case-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="img/sltm.png" alt="">
-                        <a class="case-overlay text-decoration-none" href="https://www.sltmobitel.lk/" target="_blank">
-                            <small>Project Management</small>
-                            <h5 class="lh-base text-white mb-3">SLT Mobitel Cooperate Web
-                            </h5>
-                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="case-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="img/project-alm.png" alt="">
-                        <a class="case-overlay text-decoration-none" href="https://www.alphamaritimeinternantional.com/" target="_blank">
-                            <small>Project Management</small>
-                            <h5 class="lh-base text-white mb-3">Alpha Maritime International Cooperate Web
-                            </h5>
-                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.7s">
-                    <div class="case-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="img/project-AUI.png" alt="">
-                        <a class="case-overlay text-decoration-none" href="https://indrarathna.com/" target="_blank">
-                            <small>Project Management</small>
-                            <h5 class="lh-base text-white mb-3">Ambassador Udaya Indrarathna Personal Portfolio
-                            </h5>
-                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.3s">
-                    <div class="case-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="img/project-LBChatbbot.png" alt="">
-                        <a class="case-overlay text-decoration-none" href="https://www.lbannualreports.lk/" target="_blank">
-                            <small>Project Management</small>
-                            <h5 class="lh-base text-white mb-3">LB Finance AI ChatBot
-                            </h5>
-                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="case-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="img/project-LB2024.png" alt="">
-                        <a class="case-overlay text-decoration-none" href="https://www.lbannualreports.lk/" target="_blank">
-                            <small>Project Management</small>
-                            <h5 class="lh-base text-white mb-3">LB Finance Annual Report Microsite 2023/24
-                            </h5>
-                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="case-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="img/project-thelong beach.png" alt="">
-                        <a class="case-overlay text-decoration-none" href="#" target="_blank">
-                            <small>UI UX</small>
-                            <h5 class="lh-base text-white mb-3">The Long Beach Hotel Website
-                            </h5>
-                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="case-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="img/project-picncharge.png" alt="">
-                        <a class="case-overlay text-decoration-none" href="#" target="_blank">
-                            <small>Mobile App Development</small>
-                            <h5 class="lh-base text-white mb-3">Pic N Charge App
-                            </h5>
-                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="case-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="img/project-bawbaw.png" alt="">
-                        <a class="case-overlay text-decoration-none" href="https://ebawbaw.lk/" target="_blank">
-                            <small>Web Development</small>
-                            <h5 class="lh-base text-white mb-3">BawBaw Animal Management System
-                            </h5>
+                            <h5 class="lh-base text-white mb-3">Arimac Digital Cooperate Web</h5>
                             <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
                         </a>
                     </div>
                 </div>
                 
-                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.3s">
-                    <div class="case-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="img/project-zpqr.png" alt="">
-                        <a class="case-overlay text-decoration-none" href="#" target="_blank">
-                            <small>System Development</small>
-                            <h5 class="lh-base text-white mb-3">ZP Lumala Awrudu QR Sysyem for attendance & Meal
-                            </h5>
+                <div class="col-lg-4 project-item" data-category="web">
+                    <div class="case-item position-relative overflow-hidden rounded mb-2 wow fadeIn" data-wow-delay="">
+                        <img class="img-fluid" src="img/project-dilruart.png" alt="">
+                        <a class="case-overlay text-decoration-none" href="https://dilruarthub.com/" target="_blank">
+                            <small>Web Development</small>
+                            <h5 class="lh-base text-white mb-3">Dilru Art Hub Website</h5>
+                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 project-item" data-category="web">
+                    <div class="case-item position-relative overflow-hidden rounded mb-2 wow fadeIn" data-wow-delay="">
+                        <img class="img-fluid" src="img/project-uxg.png" alt="">
+                        <a class="case-overlay text-decoration-none" href="https://www.uxgarage.lk/" target="_blank">
+                            <small>Web Development</small>
+                            <h5 class="lh-base text-white mb-3">UX Garage Website</h5>
+                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 project-item" data-category="uiux">
+                    <div class="case-item position-relative overflow-hidden rounded mb-2 wow fadeIn" data-wow-delay="">
+                        <img class="img-fluid" src="img/project-2.jpg" alt="">
+                        <a class="case-overlay text-decoration-none" href="">
+                            <small>UI UX</small>
+                            <h5 class="lh-base text-white mb-3">Vishwa Graphics</h5>
+                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 project-item" data-category="web">
+                    <div class="case-item position-relative overflow-hidden rounded mb-2 wow fadeIn" data-wow-delay="">
+                        <img class="img-fluid" src="img/project-stgbs.png" alt="">
+                        <a class="case-overlay text-decoration-none" href="">
+                            <small>Web Development</small>
+                            <h5 class="lh-base text-white mb-3">StageBs Website</h5>
+                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 project-item" data-category="graphics">
+                    <div class="case-item position-relative overflow-hidden rounded mb-2 wow fadeIn" data-wow-delay="">
+                        <img class="img-fluid" src="img/project-3.jpg" alt="">
+                        <a class="case-overlay text-decoration-none" href="">
+                            <small>Graphic Design</small>
+                            <h5 class="lh-base text-white mb-3">RK TechZoon Social Media</h5>
                             <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
                         </a>
                     </div>
                 </div>
 
-                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="case-item position-relative overflow-hidden rounded mb-2">
+                <div class="col-lg-4 project-item" data-category="pm">
+                    <div class="case-item position-relative overflow-hidden rounded mb-2 wow fadeIn" data-wow-delay="">
+                        <img class="img-fluid" src="img/sltm.png" alt="">
+                        <a class="case-overlay text-decoration-none" href="https://www.sltmobitel.lk/" target="_blank">
+                            <small>Project Management</small>
+                            <h5 class="lh-base text-white mb-3">SLT Mobitel Cooperate Web</h5>
+                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 project-item" data-category="pm">
+                    <div class="case-item position-relative overflow-hidden rounded mb-2 wow fadeIn" data-wow-delay="">
+                        <img class="img-fluid" src="img/project-alm.png" alt="">
+                        <a class="case-overlay text-decoration-none" href="https://www.alphamaritimeinternantional.com/" target="_blank">
+                            <small>Project Management</small>
+                            <h5 class="lh-base text-white mb-3">Alpha Maritime International Cooperate Web</h5>
+                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 project-item" data-category="pm">
+                    <div class="case-item position-relative overflow-hidden rounded mb-2 wow fadeIn" data-wow-delay="">
+                        <img class="img-fluid" src="img/project-AUI.png" alt="">
+                        <a class="case-overlay text-decoration-none" href="https://indrarathna.com/" target="_blank">
+                            <small>Project Management</small>
+                            <h5 class="lh-base text-white mb-3">Ambassador Udaya Indrarathna Personal Portfolio</h5>
+                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 project-item" data-category="pm">
+                    <div class="case-item position-relative overflow-hidden rounded mb-2 wow fadeIn" data-wow-delay="">
+                        <img class="img-fluid" src="img/project-LBChatbbot.png" alt="">
+                        <a class="case-overlay text-decoration-none" href="https://www.lbannualreports.lk/" target="_blank">
+                            <small>Project Management</small>
+                            <h5 class="lh-base text-white mb-3">LB Finance AI ChatBot</h5>
+                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 project-item" data-category="pm">
+                    <div class="case-item position-relative overflow-hidden rounded mb-2 wow fadeIn" data-wow-delay="">
+                        <img class="img-fluid" src="img/project-LB2024.png" alt="">
+                        <a class="case-overlay text-decoration-none" href="https://www.lbannualreports.lk/" target="_blank">
+                            <small>Project Management</small>
+                            <h5 class="lh-base text-white mb-3">LB Finance Annual Report Microsite 2023/24</h5>
+                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 project-item" data-category="uiux">
+                    <div class="case-item position-relative overflow-hidden rounded mb-2 wow fadeIn" data-wow-delay="">
+                        <img class="img-fluid" src="img/project-thelong beach.png" alt="">
+                        <a class="case-overlay text-decoration-none" href="#" target="_blank">
+                            <small>UI UX</small>
+                            <h5 class="lh-base text-white mb-3">The Long Beach Hotel Website</h5>
+                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 project-item" data-category="mobile">
+                    <div class="case-item position-relative overflow-hidden rounded mb-2 wow fadeIn" data-wow-delay="">
+                        <img class="img-fluid" src="img/project-picncharge.png" alt="">
+                        <a class="case-overlay text-decoration-none" href="#" target="_blank">
+                            <small>Mobile App Development</small>
+                            <h5 class="lh-base text-white mb-3">Pic N Charge App</h5>
+                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 project-item" data-category="web">
+                    <div class="case-item position-relative overflow-hidden rounded mb-2 wow fadeIn" data-wow-delay="">
+                        <img class="img-fluid" src="img/project-bawbaw.png" alt="">
+                        <a class="case-overlay text-decoration-none" href="https://ebawbaw.lk/" target="_blank">
+                            <small>Web Development</small>
+                            <h5 class="lh-base text-white mb-3">BawBaw Animal Management System</h5>
+                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 project-item" data-category="system">
+                    <div class="case-item position-relative overflow-hidden rounded mb-2 wow fadeIn" data-wow-delay="">
+                        <img class="img-fluid" src="img/project-zpqr.png" alt="">
+                        <a class="case-overlay text-decoration-none" href="#" target="_blank">
+                            <small>System Development</small>
+                            <h5 class="lh-base text-white mb-3">ZP Lumala Awrudu QR System for attendance & Meal</h5>
+                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 project-item" data-category="uiux">
+                    <div class="case-item position-relative overflow-hidden rounded mb-2 wow fadeIn" data-wow-delay="">
                         <img class="img-fluid" src="img/project-memoz.png" alt="">
                         <a class="case-overlay text-decoration-none" href="#" target="_blank">
                             <small>UI UX</small>
-                            <h5 class="lh-base text-white mb-3">Memoz App
-                            </h5>
+                            <h5 class="lh-base text-white mb-3">Memoz App</h5>
                             <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="case-item position-relative overflow-hidden rounded mb-2">
+                
+                <div class="col-lg-4 project-item" data-category="web">
+                    <div class="case-item position-relative overflow-hidden rounded mb-2 wow fadeIn" data-wow-delay="">
                         <img class="img-fluid" src="img/project-abansit.png" alt="">
                         <a class="case-overlay text-decoration-none" href="https://abansit.lk/" target="_blank">
                             <small>Web Development</small>
-                            <h5 class="lh-base text-white mb-3">AbansIT Website
-                            </h5>
+                            <h5 class="lh-base text-white mb-3">AbansIT Website</h5>
                             <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="case-item position-relative overflow-hidden rounded mb-2">
+                
+                <div class="col-lg-4 project-item" data-category="web">
+                    <div class="case-item position-relative overflow-hidden rounded mb-2 wow fadeIn" data-wow-delay="">
                         <img class="img-fluid" src="img/project-christel.png" alt="">
                         <a class="case-overlay text-decoration-none" href="https://www.christellskin.com/" target="_blank">
                             <small>Web Development</small>
-                            <h5 class="lh-base text-white mb-3">Christel Skin Website & Virtual Store
-                            </h5>
+                            <h5 class="lh-base text-white mb-3">Christel Skin Website & Virtual Store</h5>
                             <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="case-item position-relative overflow-hidden rounded mb-2">
+                
+                <div class="col-lg-4 project-item" data-category="web">
+                    <div class="case-item position-relative overflow-hidden rounded mb-2 wow fadeIn" data-wow-delay="">
                         <img class="img-fluid" src="img/project-frabina.png" alt="">
                         <a class="case-overlay text-decoration-none" href="https://www.frabina.ch/en/" target="_blank">
                             <small>Web Development</small>
-                            <h5 class="lh-base text-white mb-3">Frabina Website
-                            </h5>
+                            <h5 class="lh-base text-white mb-3">Frabina Website</h5>
                             <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="case-item position-relative overflow-hidden rounded mb-2">
+                
+                <div class="col-lg-4 project-item" data-category="web">
+                    <div class="case-item position-relative overflow-hidden rounded mb-2 wow fadeIn" data-wow-delay="">
                         <img class="img-fluid" src="img/project-devinuwara.png" alt="">
                         <a class="case-overlay text-decoration-none" href="https://www.devinuwarasrilanka.com/" target="_blank">
                             <small>Web Development</small>
-                            <h5 class="lh-base text-white mb-3">Devinuwara Sri Lanka Website
-                            </h5>
+                            <h5 class="lh-base text-white mb-3">Devinuwara Sri Lanka Website</h5>
                             <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
                         </a>
                     </div>
@@ -361,144 +400,6 @@
         </div>
     </div>
     <!-- Case End -->
-
-
-    <!-- FAQs Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px;">
-                <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Popular FAQs</div>
-                <h1 class="mb-4">Frequently Asked Questions</h1>
-            </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="accordion" id="accordionFAQ1">
-                        <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                    What types of businesses do you work with?
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                                data-bs-parent="#accordionFAQ1">
-                                <div class="accordion-body">
-                                    I work with startups, small businesses, entrepreneurs, and established companies across various industries. Every project is customized to fit your unique needs and goals.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item wow fadeIn" data-wow-delay="0.2s">
-                            <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    How long does a typical project take?
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                data-bs-parent="#accordionFAQ1">
-                                <div class="accordion-body">
-                                    Timelines vary depending on the scope and complexity of the project. For example, a basic website might take 1–2 weeks, while a full branding package or e-commerce site could take longer.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item wow fadeIn" data-wow-delay="0.3s">
-                            <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    What is your pricing structure?
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                                data-bs-parent="#accordionFAQ1">
-                                <div class="accordion-body">
-                                    Pricing is based on the specific service and project scope. After an initial consultation, I provide a detailed quote with no hidden fees.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item wow fadeIn" data-wow-delay="0.4s">
-                            <h2 class="accordion-header" id="headingFour">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                                    Do you offer ongoing support after the project is completed?
-                                </button>
-                            </h2>
-                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                                data-bs-parent="#accordionFAQ1">
-                                <div class="accordion-body">
-                                    Yes! I offer maintenance packages and ongoing support to ensure everything runs smoothly even after delivery.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="accordion" id="accordionFAQ2">
-                        <div class="accordion-item wow fadeIn" data-wow-delay="0.5s">
-                            <h2 class="accordion-header" id="headingFive">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                    Can you help improve my existing website or brand?
-                                </button>
-                            </h2>
-                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
-                                data-bs-parent="#accordionFAQ2">
-                                <div class="accordion-body">
-                                    Absolutely. Whether you need a website refresh, a brand update, or help optimizing your social media presence, I can help enhance what you already have.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item wow fadeIn" data-wow-delay="0.6s">
-                            <h2 class="accordion-header" id="headingSix">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                    How do we get started?
-                                </button>
-                            </h2>
-                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
-                                data-bs-parent="#accordionFAQ2">
-                                <div class="accordion-body">
-                                    Just reach out via my contact page or message me directly. We’ll schedule a free consultation to discuss your needs and how I can help.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item wow fadeIn" data-wow-delay="0.7s">
-                            <h2 class="accordion-header" id="headingSeven">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                                    Do you work with international clients?
-                                </button>
-                            </h2>
-                            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
-                                data-bs-parent="#accordionFAQ2">
-                                <div class="accordion-body">
-                                    Yes, I collaborate with clients globally through virtual meetings, email, and shared project platforms.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item wow fadeIn" data-wow-delay="0.8s">
-                            <h2 class="accordion-header" id="headingEight">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                                    What tools and platforms do you use?
-                                </button>
-                            </h2>
-                            <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
-                                data-bs-parent="#accordionFAQ2">
-                                <div class="accordion-body">
-                                    I use industry-standard tools like WordPress, Adobe Creative Suite, Figma, Canva, Meta Business Suite, and more—depending on what best suits your project.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- FAQs Start -->
-
-
-    
-
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white-50 footer pt-5">
@@ -565,11 +466,6 @@
     </div>
     <!-- Footer End -->
 
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up"></i></a>
-
-
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -581,6 +477,34 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            // Filter projects when button is clicked
+            $('.filter-btn').click(function(){
+                // Remove active class from all buttons
+                $('.filter-btn').removeClass('active');
+                // Add active class to clicked button
+                $(this).addClass('active');
+                
+                var filter = $(this).data('filter');
+                
+                if(filter == 'all') {
+                    // Show all projects
+                    $('.project-item').removeClass('hide');
+                    $('.project-item').addClass('show');
+                } else {
+                    // Hide all projects first
+                    $('.project-item').addClass('hide');
+                    $('.project-item').removeClass('show');
+                    
+                    // Show only projects with matching data-category
+                    $('.project-item[data-category="' + filter + '"]').removeClass('hide');
+                    $('.project-item[data-category="' + filter + '"]').addClass('show');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
